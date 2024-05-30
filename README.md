@@ -15,80 +15,44 @@ This repository contains an end-to-end application implemented with Flask, desig
 ## Directory Structure
 
 .
-
 ├── .git
-
-│ ├── COMMIT_EDITMSG
-
-│ ├── config
-
-│ ├── description
-
-│ ├── HEAD
-
-│ ├── hooks
-
-│ ├── index
-
-│ ├── info
-
-│ ├── logs
-
-│ ├── objects
-
-│ ├── refs
-
-│ └── .gitignore
-
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── HEAD
+│   ├── hooks
+│   ├── index
+│   ├── info
+│   ├── logs
+│   ├── objects
+│   ├── refs
+│   └── .gitignore
 ├── app.py
-
 ├── artifacts
-
-│ ├── data.csv
-
-│ ├── model.pkl
-
-│ ├── preprocessor.pkl
-
-│ ├── test.csv
-
-│ ├── train.csv
-
-│ └── init.py
-
+│   ├── data.csv
+│   ├── model.pkl
+│   ├── preprocessor.pkl
+│   ├── test.csv
+│   ├── train.csv
+│   └── __init__.py
 ├── logs
-
 ├── notebook
-
-│ ├── 1 . EDA STUDENT PERFORMANCE .ipynb
-
-│ └── 2. MODEL TRAINING.ipynb
-
+│   ├── 1. EDA STUDENT PERFORMANCE.ipynb
+│   └── 2. MODEL TRAINING.ipynb
 ├── README.md
-
 ├── requirements.txt
-
 ├── setup.py
-
 ├── src
-
-│ ├── components
-
-│ ├── exception.py
-
-│ ├── logger.py
-
-│ ├── pipeline
-
-│ ├── utils.py
-
-│ └── init.py
-
+│   ├── components
+│   ├── exception.py
+│   ├── logger.py
+│   ├── pipeline
+│   ├── utils.py
+│   └── __init__.py
 └── templates
+    ├── home.html
+    └── index.html
 
-├── home.html
-
-└── index.html
 
 ## Setup Instructions
 
