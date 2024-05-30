@@ -14,21 +14,44 @@ This repository contains an end-to-end application implemented with Flask, desig
 
 ## Directory Structure
 
-```plaintext
-├── src
-│   ├── components
-│   │   ├── data_ingestion.py
-│   │   ├── model_training.py
-│   │   ├── prediction.py
-│   ├── templates
-│   │   ├── index.html
-│   │   ├── home.html
-├── static
-│   ├── css
-│   ├── js
+.
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── HEAD
+│   ├── hooks
+│   ├── index
+│   ├── info
+│   ├── logs
+│   ├── objects
+│   ├── refs
+│   └── .gitignore
 ├── app.py
+├── artifacts
+│   ├── data.csv
+│   ├── model.pkl
+│   ├── preprocessor.pkl
+│   ├── test.csv
+│   ├── train.csv
+│   └── __init__.py
+├── logs
+├── notebook
+│   ├── 1 . EDA STUDENT PERFORMANCE .ipynb
+│   └── 2. MODEL TRAINING.ipynb
 ├── README.md
 ├── requirements.txt
+├── setup.py
+├── src
+│   ├── components
+│   ├── exception.py
+│   ├── logger.py
+│   ├── pipeline
+│   ├── utils.py
+│   └── __init__.py
+└── templates
+    ├── home.html
+    └── index.html
 
 ## Setup Instructions
 
@@ -54,7 +77,7 @@ python src/components/data_ingestion.py
         The script data_ingestion.py will handle the collection and preprocessing of training and test data. It will train multiple models and store the best model along with preprocessing steps in pickle files.
 
     Running the Flask Application:
-        Start the Flask server using app.py. Open your web browser and navigate to http://127.0.0.1:5000/ to interact with the application.
+        Start the Flask server using app.py. Open your web browser and navigate to http://127.0.0.1:5000/predict_score to interact with the application.
 
     User Interaction:
         The web interface consists of two pages: index.html and home.html.
