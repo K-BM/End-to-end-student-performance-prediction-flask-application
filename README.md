@@ -14,7 +14,7 @@ This repository contains an end-to-end application implemented with Flask, desig
 
 ## Directory Structure
 
-project-directory
+```
 │
 ├── .git
 │ ├── COMMIT_EDITMSG
@@ -62,7 +62,7 @@ project-directory
 └── templates
 ├── home.html
 └── index.html
-
+```
 
 ## Setup Instructions
 
