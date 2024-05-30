@@ -15,57 +15,94 @@ This repository contains an end-to-end application implemented with Flask, desig
 ## Directory Structure
 
 .
+
 ├── .git
-│   ├── COMMIT_EDITMSG
-│   ├── config
-│   ├── description
-│   ├── HEAD
-│   ├── hooks
-│   ├── index
-│   ├── info
-│   ├── logs
-│   ├── objects
-│   ├── refs
-│   └── .gitignore
+
+│ ├── COMMIT_EDITMSG
+
+│ ├── config
+
+│ ├── description
+
+│ ├── HEAD
+
+│ ├── hooks
+
+│ ├── index
+
+│ ├── info
+
+│ ├── logs
+
+│ ├── objects
+
+│ ├── refs
+
+│ └── .gitignore
+
 ├── app.py
+
 ├── artifacts
-│   ├── data.csv
-│   ├── model.pkl
-│   ├── preprocessor.pkl
-│   ├── test.csv
-│   ├── train.csv
-│   └── __init__.py
+
+│ ├── data.csv
+
+│ ├── model.pkl
+
+│ ├── preprocessor.pkl
+
+│ ├── test.csv
+
+│ ├── train.csv
+
+│ └── init.py
+
 ├── logs
+
 ├── notebook
-│   ├── 1 . EDA STUDENT PERFORMANCE .ipynb
-│   └── 2. MODEL TRAINING.ipynb
+
+│ ├── 1 . EDA STUDENT PERFORMANCE .ipynb
+
+│ └── 2. MODEL TRAINING.ipynb
+
 ├── README.md
+
 ├── requirements.txt
+
 ├── setup.py
+
 ├── src
-│   ├── components
-│   ├── exception.py
-│   ├── logger.py
-│   ├── pipeline
-│   ├── utils.py
-│   └── __init__.py
+
+│ ├── components
+
+│ ├── exception.py
+
+│ ├── logger.py
+
+│ ├── pipeline
+
+│ ├── utils.py
+
+│ └── init.py
+
 └── templates
-    ├── home.html
-    └── index.html
+
+├── home.html
+
+└── index.html
 
 ## Setup Instructions
 
-    Clone the Repository:
+Clone the Repository:
 
-        git clone https://github.com/K-BM/End-to-end-student-performance-prediction-flask-application.git
-        cd student-math-score-prediction
+    git clone https://github.com/K-BM/End-to-end-student-performance-prediction-flask-application.git
+    cd student-math-score-prediction
 
 ## Install Dependencies:
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ## Run Data Ingestion and Model Training:
-python src/components/data_ingestion.py
+    python src/components/data_ingestion.py
 
 ## Launch the Flask Application:
 
@@ -73,32 +110,32 @@ python src/components/data_ingestion.py
 
 ## Usage
 
-    Data Ingestion and Model Training:
-        The script data_ingestion.py will handle the collection and preprocessing of training and test data. It will train multiple models and store the best model along with preprocessing steps in pickle files.
+Data Ingestion and Model Training:
+The script data_ingestion.py will handle the collection and preprocessing of training and test data. It will train multiple models and store the best model along with preprocessing steps in pickle files.
 
-    Running the Flask Application:
-        Start the Flask server using app.py. Open your web browser and navigate to http://127.0.0.1:5000/predict_score to interact with the application.
+Running the Flask Application:
+  Start the Flask server using app.py. Open your web browser and navigate to http://127.0.0.1:5000/predict_score to interact with the application.
 
-    User Interaction:
-        The web interface consists of two pages: index.html and home.html.
-        index.html serves as the landing page.
-        home.html allows users to input student attributes and make predictions on their math scores.
+User Interaction:
+  The web interface consists of two pages: index.html and home.html.
+  index.html serves as the landing page.
+  home.html allows users to input student attributes and make predictions on their math scores.
 
 ## Components
 
-    data_ingestion.py:
+data_ingestion.py:
         Collects and processes the training and test data.
         Trains multiple regression models.
         Selects and saves the best model based on the highest R² score.
 
-    model_training.py:
+model_training.py:
         (Optional) Additional module to handle model training separately.
 
-    prediction.py:
+prediction.py:
         Loads the preprocessed data and the best model.
         Makes predictions based on user input through the Flask app.
 
-    Flask App (app.py):
+Flask App (app.py):
         Sets up the Flask web server.
         Routes user requests and renders the web pages.
         Handles user input and invokes the prediction pipeline.
